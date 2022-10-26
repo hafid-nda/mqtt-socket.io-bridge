@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 //listen connection from socketio client
 io.on('connection', (socket) => {
   console.log('a user connected');
-  socket.on('chat message', (msg) => {
+  socket.on('chatMessage', (msg) => {
     console.log('message: ' + msg);
     io.emit('chat message', msg);
   })
@@ -35,7 +35,7 @@ client.on('connect', function () {
 client.on('message', function (topic, message) {
   // message is Buffer
   console.log(message.toString())
-  io.emit('chat message', message.toString());  
+  io.emit('chatMessage', message.toString());  
 })
 
 server.listen(3005, () => {
