@@ -1,1 +1,1 @@
-Simple app to provide socket.io to receive data from MQTT
+Simple app to provide socket.io interface to receive data from MQTT
